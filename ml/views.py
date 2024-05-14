@@ -61,7 +61,7 @@ class Data(APIView):
         #Build LSTM model
         model = Sequential()
         model.add(LSTM(256,return_sequences=True, input_shape=(x_train.shape[1],1)))
-        model.add(LSTM(50, return_sequences=False))
+        model.add(LSTM(256, return_sequences=False))
         model.add(Dense(25))
         model.add(Dense(1))
 
